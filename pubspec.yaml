@@ -1,0 +1,49 @@
+name: youtube_social_media_tutorial
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.4.4 <4.0.0'
+
+dependencies:
+  animation_wrappers: null
+  auto_route: ^8.1.3
+  awesome_bottom_bar: null
+  bloc: null
+  cached_network_image: null
+  dio: null
+  equatable: ^2.0.5
+  feather_icons: null
+  flutter:
+    sdk: flutter
+  flutter_bloc: null
+  flutter_screenutil: null
+  freezed_annotation: null
+  google_fonts: null
+  hydrated_bloc: ^9.1.5
+  json_annotation: null
+  lottie: ^3.1.2
+  path_provider: ^2.1.4
+  pretty_dio_logger: null
+  shared_preferences: null
+  smooth_page_indicator: null
+  velocity_x: null
+  velocity_bloc:
+
+dev_dependencies:
+  auto_route_generator: null
+  build_runner: null
+  flutter_lints: ^3.0.0
+  flutter_test:
+    sdk: flutter
+  freezed: null
+  json_serializable: null
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/icons/bottom navigation/
+    - assets/json/

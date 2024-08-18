@@ -1,0 +1,30 @@
+import 'dart:io';
+
+import 'package:dio/dio.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:youtube_social_media_tutorial/src/controller/blocs/auth/auth_bloc.dart';
+import 'package:youtube_social_media_tutorial/src/data/data_sources/api_endpoint.dart';
+import 'package:youtube_social_media_tutorial/src/data/model/request/auth/request_reset_password/request_reset_password.dart';
+import 'package:youtube_social_media_tutorial/src/data/model/request/auth/reset_password/request_reset_password_entity.dart';
+import 'package:youtube_social_media_tutorial/src/data/model/request/auth/sign_in/request_sign_in_entity.dart';
+import 'package:youtube_social_media_tutorial/src/data/model/request/auth/sign_up/request_sing_up_entity.dart';
+import 'package:youtube_social_media_tutorial/src/data/model/request/auth/update/request_update_user_entity.dart';
+import 'package:youtube_social_media_tutorial/src/data/model/request/post/comment/request_comment_entity.dart';
+import 'package:youtube_social_media_tutorial/src/data/model/request/post/like/request_like_entity.dart';
+import 'package:youtube_social_media_tutorial/src/data/model/request/post/reply/request_reply_entity.dart';
+import 'package:youtube_social_media_tutorial/src/data/model/request/post/upload_posts/request_upload_post_entity.dart';
+import 'package:youtube_social_media_tutorial/src/data/model/request/user/user_follow/request_user_follow_entity.dart';
+import 'package:youtube_social_media_tutorial/src/data/model/response/auth/auth_user.dart';
+import 'package:youtube_social_media_tutorial/src/data/model/response/message/response_message_entity.dart';
+import 'package:youtube_social_media_tutorial/src/data/model/response/post/response_post_entity.dart';
+import 'package:youtube_social_media_tutorial/src/data/model/response/user/user_entity.dart';
+import 'package:youtube_social_media_tutorial/src/data/remote/app_response/app_response.dart';
+
+part 'remote/dio/dio_client.dart';
+part 'remote/dio_interceptors/dio_interceptors.dart';
+part 'repositories/auth_repository/auth_repository.dart';
+part 'repositories/auth_repository/base_auth_repository.dart';
+part 'repositories/post_repository/base_post_repository.dart';
+part 'repositories/post_repository/post_repository.dart';
+part 'repositories/story_repository/base_story_repository.dart';
+part 'repositories/story_repository/story_repository.dart';
