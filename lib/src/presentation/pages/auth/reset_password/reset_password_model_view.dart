@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 part of '../auth_import.dart';
 class ResetPasswordModelView {
   final GuestCubit guestCubit;

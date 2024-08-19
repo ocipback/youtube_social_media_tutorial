@@ -29,4 +29,7 @@ class MyAppAssets {
   static const shopIconFilled = 'assets/icons/Shop Icon Filled.png';
 
   static const headerJson = 'assets/json/header.json';
+
+  static const double profileHeigth = 144;
+  static const double coverHeight = 250;
 }

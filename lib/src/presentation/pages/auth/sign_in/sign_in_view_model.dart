@@ -1,4 +1,5 @@
 part of '../auth_import.dart';
+
 class LoginViewModel {
   final GuestCubit guestCubit;
   LoginViewModel({required this.guestCubit});
@@ -21,11 +22,14 @@ class LoginViewModel {
 
       if (loginData != false) {
         AutoRouter.of(context).replace(const HomeRoute());
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('An unexpected error occurred: $loginData')),
+      );
       }
     } catch (e) {
-      // Handle any exceptions
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('An error occurred: $e')),
+        SnackBar(content: Text('An unexpected error occurred: $e')),
       );
     } finally {
       isLoadingBloc.onUpdateData(false);

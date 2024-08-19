@@ -10,9 +10,9 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i4;
 import 'package:youtube_social_media_tutorial/src/presentation/pages/auth/auth_import.dart'
-    as _i1;
-import 'package:youtube_social_media_tutorial/src/presentation/pages/pages_imports.dart'
     as _i2;
+import 'package:youtube_social_media_tutorial/src/presentation/pages/pages_imports.dart'
+    as _i1;
 import 'package:youtube_social_media_tutorial/src/presentation/pages/widget/splash_screen_view.dart'
     as _i3;
 
@@ -21,40 +21,46 @@ abstract class $AppRouter extends _i4.RootStackRouter {
 
   @override
   final Map<String, _i4.PageFactory> pagesMap = {
+    DashboardRoute.name: (routeData) {
+      return _i4.AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const _i1.Dashboard(),
+      );
+    },
     ForgotPasswordViewRoute.name: (routeData) {
       return _i4.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.ForgotPasswordView(),
+        child: const _i2.ForgotPasswordView(),
       );
     },
     HomeRoute.name: (routeData) {
       return _i4.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.Home(),
+        child: const _i1.Home(),
       );
     },
     ResetPasswordViewRoute.name: (routeData) {
       return _i4.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.ResetPasswordView(),
+        child: const _i2.ResetPasswordView(),
       );
     },
     SignInViewRoute.name: (routeData) {
       return _i4.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.SignInView(),
+        child: const _i2.SignInView(),
       );
     },
     SignUpViewRoute.name: (routeData) {
       return _i4.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i1.SignUpView(),
+        child: const _i2.SignUpView(),
       );
     },
     SplashScreenRoute.name: (routeData) {
       return _i4.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.SplashScreen(),
+        child: const _i1.SplashScreen(),
       );
     },
     SplashScreenViewRoute.name: (routeData) {
@@ -67,7 +73,21 @@ abstract class $AppRouter extends _i4.RootStackRouter {
 }
 
 /// generated route for
-/// [_i1.ForgotPasswordView]
+/// [_i1.Dashboard]
+class DashboardRoute extends _i4.PageRouteInfo<void> {
+  const DashboardRoute({List<_i4.PageRouteInfo>? children})
+      : super(
+          DashboardRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'DashboardRoute';
+
+  static const _i4.PageInfo<void> page = _i4.PageInfo<void>(name);
+}
+
+/// generated route for
+/// [_i2.ForgotPasswordView]
 class ForgotPasswordViewRoute extends _i4.PageRouteInfo<void> {
   const ForgotPasswordViewRoute({List<_i4.PageRouteInfo>? children})
       : super(
@@ -81,7 +101,7 @@ class ForgotPasswordViewRoute extends _i4.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.Home]
+/// [_i1.Home]
 class HomeRoute extends _i4.PageRouteInfo<void> {
   const HomeRoute({List<_i4.PageRouteInfo>? children})
       : super(
@@ -95,7 +115,7 @@ class HomeRoute extends _i4.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i1.ResetPasswordView]
+/// [_i2.ResetPasswordView]
 class ResetPasswordViewRoute extends _i4.PageRouteInfo<void> {
   const ResetPasswordViewRoute({List<_i4.PageRouteInfo>? children})
       : super(
@@ -109,7 +129,7 @@ class ResetPasswordViewRoute extends _i4.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i1.SignInView]
+/// [_i2.SignInView]
 class SignInViewRoute extends _i4.PageRouteInfo<void> {
   const SignInViewRoute({List<_i4.PageRouteInfo>? children})
       : super(
@@ -123,7 +143,7 @@ class SignInViewRoute extends _i4.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i1.SignUpView]
+/// [_i2.SignUpView]
 class SignUpViewRoute extends _i4.PageRouteInfo<void> {
   const SignUpViewRoute({List<_i4.PageRouteInfo>? children})
       : super(
@@ -137,7 +157,7 @@ class SignUpViewRoute extends _i4.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i2.SplashScreen]
+/// [_i1.SplashScreen]
 class SplashScreenRoute extends _i4.PageRouteInfo<void> {
   const SplashScreenRoute({List<_i4.PageRouteInfo>? children})
       : super(

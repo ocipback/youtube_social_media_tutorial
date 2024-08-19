@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:youtube_social_media_tutorial/src/controller/blocs/auth/auth_bloc.dart';
+import 'package:youtube_social_media_tutorial/src/controller/blocs/user/user_bloc.dart';
 import 'package:youtube_social_media_tutorial/src/controller/cubits/guest/guest_cubit.dart';
 import 'package:youtube_social_media_tutorial/src/core/constant/app_string.dart';
 import 'package:youtube_social_media_tutorial/src/core/core.dart';
@@ -38,6 +39,8 @@ class MainApp extends StatelessWidget {
           BlocProvider(
               create: (_) => GuestCubit(
                   authRepository: AuthRepository(), authBloc: AuthBloc())),
+          BlocProvider(
+              create: (_) => UserBloc(authRepository: AuthRepository())),
         ],
         child: ScreenUtilInit(
           designSize: const Size(390, 844),

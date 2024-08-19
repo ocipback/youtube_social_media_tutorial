@@ -7,6 +7,7 @@ import 'package:youtube_social_media_tutorial/src/data/model/request/auth/reques
 import 'package:youtube_social_media_tutorial/src/data/model/request/auth/reset_password/request_reset_password_entity.dart';
 import 'package:youtube_social_media_tutorial/src/data/model/request/auth/sign_in/request_sign_in_entity.dart';
 import 'package:youtube_social_media_tutorial/src/data/model/request/auth/sign_up/request_sing_up_entity.dart';
+import 'package:youtube_social_media_tutorial/src/utils/shared_preferences/utils.dart';
 
 part 'guest_state.dart';
 part 'guest_cubit.freezed.dart';
@@ -30,10 +31,11 @@ class GuestCubit extends Cubit<GuestState> {
         token: response.data!.token,
         message: null,
       ));
-
+      Utils.saveToken(response.data!.token.toString());
       return null;
     }
-    return response.meta!.status!;
+
+    return response.meta!.status;
   }
 
   Future<bool?> register(name, email, password, passwordConfirmation) async {

@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 part of '../pages_imports.dart';
 
 @RoutePage()
@@ -9,6 +11,15 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  late UserBloc userBloc;
+
+  @override
+  void initState() {
+    userBloc = UserBloc(authRepository: context.read<AuthRepository>());
+    userBloc.add(const LoadMore());
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final guest = context.read<GuestCubit>();
@@ -29,6 +40,11 @@ class _HomeState extends State<Home> {
               },
               icon: const Icon(Icons.logout))
         ],
+      ),
+      body: const SafeArea(
+        child: SingleChildScrollView(
+          child: Column(),
+        ),
       ),
     );
   }

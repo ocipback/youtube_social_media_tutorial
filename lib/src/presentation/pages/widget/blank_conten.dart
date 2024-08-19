@@ -1,4 +1,5 @@
 part of '../pages_imports.dart';
+
 class BlankContent extends StatelessWidget {
   const BlankContent({
     super.key,
@@ -18,11 +19,12 @@ class BlankContent extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: isLoading != null && isLoading == true
-            ? const [
+            ?  [
                 SizedBox(
-                  height: 100,
-                  width: 100,
-                  child: CircularProgressIndicator(),
+                  child: LoadingAnimationWidget.newtonCradle(
+                    color: Colors.green,
+                    size: 150,
+                  ),
                 ),
               ]
             : [

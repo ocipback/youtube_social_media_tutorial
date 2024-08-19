@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
       final appRouter = AutoRouter.of(context);
 
       final redirectScreen = authState.isAuthenticated
-          ? const HomeRoute()
+          ? const DashboardRoute()
           : const SignInViewRoute();
 
       appRouter.replace(redirectScreen);

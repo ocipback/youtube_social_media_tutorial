@@ -1,4 +1,5 @@
 part of '../../data_import.dart';
+
 class AppInterceptors extends Interceptor {
   static AppInterceptors? _singleton;
 
@@ -11,12 +12,17 @@ class AppInterceptors extends Interceptor {
   void onRequest(
       RequestOptions options, RequestInterceptorHandler handler) async {
     /// Tries to add Authorization header only if Authorization header not extisted
-    if (!options.headers.containsKey(HttpHeaders.authorizationHeader)) {
-      final state = AuthBloc().state;
+    if (!options.headers.containsKey(HttpHeaders.authorizationHeader))  {
+      // SharedPreferences prefs = await SharedPreferences.getInstance();
+      // final state = AuthBloc().state;
 
-      if (state.token != null) {
-        options.headers[HttpHeaders.authorizationHeader] =
-            'Bearer ${state.token}';
+      // Retrieve the token from SharedPreferences
+     var token = await Utils.getToken();
+
+      // Check if the token is not null
+      if (token != null) {
+        // Set the Authorization header
+        options.headers[HttpHeaders.authorizationHeader] = 'Bearer $token';
       }
     }
 

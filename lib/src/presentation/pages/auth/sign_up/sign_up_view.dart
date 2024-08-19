@@ -122,7 +122,7 @@ class _SignUpViewState extends State<SignUpView> {
                           borderType: VxTextFieldBorderType.roundLine,
                           controller: signUpViewModel.passwordConfirmationController,
                           borderRadius: 10,
-                          prefixIcon: Icon(Icons.lock),
+                          prefixIcon: const Icon(Icons.lock),
                           // validator: (value) {
                           //   if (value == null || value.isEmpty) {
                           //     return 'Confirm Password is required';

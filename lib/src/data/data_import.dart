@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import 'package:youtube_social_media_tutorial/src/controller/blocs/auth/auth_bloc.dart';
 import 'package:youtube_social_media_tutorial/src/data/data_sources/api_endpoint.dart';
 import 'package:youtube_social_media_tutorial/src/data/model/request/auth/request_reset_password/request_reset_password.dart';
 import 'package:youtube_social_media_tutorial/src/data/model/request/auth/reset_password/request_reset_password_entity.dart';
@@ -19,6 +18,7 @@ import 'package:youtube_social_media_tutorial/src/data/model/response/message/re
 import 'package:youtube_social_media_tutorial/src/data/model/response/post/response_post_entity.dart';
 import 'package:youtube_social_media_tutorial/src/data/model/response/user/user_entity.dart';
 import 'package:youtube_social_media_tutorial/src/data/remote/app_response/app_response.dart';
+import 'package:youtube_social_media_tutorial/src/utils/shared_preferences/utils.dart';
 
 part 'remote/dio/dio_client.dart';
 part 'remote/dio_interceptors/dio_interceptors.dart';
